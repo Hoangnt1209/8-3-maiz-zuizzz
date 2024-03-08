@@ -1,0 +1,110 @@
+@import url('https://fonts.cdnfonts.com/css/playpen-sans');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Ensure the container is above the background */
+  padding: 20px;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%; /* Make the height double the viewport height to enable scrolling */
+  background: url(https://pixabay.com/static/uploads/photo/2015/02/21/09/57/heart-644091_960_720.png) center top ;
+}
+
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+
+}
+
+#pinkboard {
+  position: relative;
+  margin: auto;
+  height: 500px;
+  width: 500px;
+  animation: animate 1.3s infinite;
+}
+
+#pinkboard:before,
+#pinkboard:after {
+  content: '';
+  position: absolute;
+  background: #FF5CA4;
+  width: 100px;
+  height: 160px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+#pinkboard:before {
+  left: 100px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+              0 10px 10px rgba(0,0,0,0.22);
+}
+
+#pinkboard:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(.8);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.center-text {
+  margin-top: 35px;
+  margin-left: 55px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  font-family: 'Playpen Sans', sans-serif;
+  color: rgb(225, 12, 168);
+  z-index: 1;
+  text-align: center;
+}
+.small-text {
+  font-size: 5px; /* Font size for "tu" */
+}
+path {
+  stroke: #ff0000;
+  stroke-width: 2;
+  stroke-dasharray: 10000;
+  stroke-dashoffset: 10000;
+  fill-opacity: 10;
+}
