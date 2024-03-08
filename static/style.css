@@ -88,10 +88,10 @@ canvas {
 @import url('https://fonts.cdnfonts.com/css/magdives');
 .center-text {
   margin-top: 5%;
-  margin-left: 6%;
+  margin-left: 3.5%;
   position: absolute;
   transform: translate(-50%, -50%);
-  font-size: 32px;
+  font-size: 40px;
   font-family: 'Dancing Script', cursive;
   color: rgb(225, 12, 168);
   z-index: 1;
