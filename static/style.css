@@ -88,8 +88,8 @@ canvas {
 }
 
 .center-text {
-  margin-top: 35px;
-  margin-left: 55px;
+  margin-top: 2%;
+  margin-left: 5%;
   position: absolute;
   transform: translate(-50%, -50%);
   font-size: 22px;
